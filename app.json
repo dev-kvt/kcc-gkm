@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "my-expo-app",
-    "slug": "my-expo-app",
+    "name": "KCC Manage",
+    "slug": "KCC Manage",
     "version": "1.0.0",
 
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/IMG-20251129-WA0005.jpg"
     },
 
     "experiments": {
@@ -15,12 +15,12 @@
     "plugins": [],
 
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/IMG-20251129-WA0005.jpg",
 
     "userInterfaceStyle": "light",
 
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/IMG-20251129-WA0005.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -30,7 +30,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/IMG-20251129-WA0005.jpg",
         "backgroundColor": "#ffffff"
       }
     }
