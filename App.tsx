@@ -2,10 +2,11 @@ import { StatusBar } from 'expo-status-bar';
 import { View, Text, TouchableOpacity, Linking, SafeAreaView, Image } from 'react-native';
 import { useState } from 'react';
 import { TeacherLogin } from './components/TeacherLogin';
+import { StudentPage } from './components/StudentPage';
 import './global.css';
 
 export default function App() {
-  const [currentScreen, setCurrentScreen] = useState<'home' | 'teacher'>('home');
+  const [currentScreen, setCurrentScreen] = useState<'home' | 'teacher' | 'student'>('home');
 
   const handleContribute = () => {
     Linking.openURL('https://github.com/dev-kvt/kcc-gkm');
@@ -13,6 +14,10 @@ export default function App() {
 
   if (currentScreen === 'teacher') {
     return <TeacherLogin onBack={() => setCurrentScreen('home')} />;
+  }
+
+  if (currentScreen === 'student') {
+    return <StudentPage onBack={() => setCurrentScreen('home')} />;
   }
 
   return (
@@ -25,7 +30,7 @@ export default function App() {
         />
 
         <Text className="text-4xl font-extrabold text-black mb-10 text-center">
-          KCC - Manage 
+          KCC - Manage
         </Text>
 
         <View className="w-full max-w-sm bg-white p-6 rounded-2xl shadow-lg">
@@ -45,7 +50,7 @@ export default function App() {
 
             <TouchableOpacity
               className="w-full bg-gray-100 py-4 rounded-xl active:bg-green-600"
-              onPress={() => console.log('Students pressed')}
+              onPress={() => setCurrentScreen('student')}
             >
               <Text className="text-gray text-center font-bold text-lg">
                 Students
